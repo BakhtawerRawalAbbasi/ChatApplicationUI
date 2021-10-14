@@ -1,0 +1,28 @@
+﻿<Window x:Class="Chat_Application_Clients.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chat_Application_Clients"
+        xmlns:viewmodels="clr-namespace:Chat_Application_Clients.ViewModel" 
+        xmlns:views="clr-namespace:Chat_Application_Clients.Views" d:DataContext="{d:DesignInstance Type=viewmodels:MainViewModel}"
+        Title="MainWindow" Height="550" Width="800"
+          mc:Ignorable="d">
+
+    <ContentControl Content="{Binding CurrentViewModel}">
+        <ContentControl.Resources>
+            <DataTemplate DataType="{x:Type viewmodels:LoginViewModel}">
+                <views:LoginView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:RegistrationViewModel}">
+                <views:RegistrationView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type viewmodels:ChatPageViewModel}">
+                <views:ChatPageView/>
+            </DataTemplate>
+        </ContentControl.Resources>
+    </ContentControl>
+</Window>
+
+
+
