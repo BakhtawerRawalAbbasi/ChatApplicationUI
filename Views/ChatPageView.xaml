@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:local="clr-namespace:Chat_Application_Clients.Views" 
              xmlns:viewmodel="clr-namespace:Chat_Application_Clients.ViewModel"
              d:DataContext="{d:DesignInstance Type=viewmodel:ChatPageViewModel}"
@@ -17,37 +18,77 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-         <StackPanel Orientation="Horizontal"
-                     Grid.Row="0"
-                    Grid.Column="0" >
-         
-            
-            <Button Name="btnDelete"
+
+        <Button Name="btnDelete"
                     Content="Log Out"
                     Margin="70,8"
                     Padding="3"
                    />
-        </StackPanel>
-    
-        <DataGrid Name="dgEmployees"
-                  AutoGenerateColumns="False"
-                  Grid.Row="1"
-                  Grid.Column="0"
-                  Margin="5,8"
-                  Padding="3"
-                  ItemsSource="{Binding UserList, Mode=TwoWay}"
-                  >
+
+
+        <DataGrid 
+            Name="dgEmployees"
+            AlternatingRowBackground="LightBlue"
+            AlternationCount="2"
+            AutoGenerateColumns="False"
+            Background="Azure"
+            IsReadOnly="True"
+            Grid.Row="1"
+            Grid.Column="0"
+            ItemsSource="{Binding UserList, Mode=TwoWay}"
+       
+            >
+
             <DataGrid.Columns>
-                <DataGridTextColumn Header="UserId"
-                                    Width="AUTO"
+                <DataGridTextColumn Header="User Name"
+                                    Width="AUTO" 
                                     Binding="{Binding UserName, Mode=TwoWay}"/>
-                <DataGridTextColumn Header="EmailID"
+                <DataGridTextColumn Header="Email ID"
                                     Width="AUTO"
                                     Binding="{Binding EmailID , Mode=TwoWay}"/>
-            
+
             </DataGrid.Columns>
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseDoubleClick">
+                    <i:InvokeCommandAction Command="{Binding ItemSelectionChanged}"
+                                   CommandParameter="{Binding  ElementName=dgEmployees ,Path=SelectedItem}" />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
         </DataGrid>
+        <DataGrid 
+         Name="dgvMessages"
+         Width="400" 
+         Height="200"
+         Background="Azure"
+         IsReadOnly="True"
+         Grid.Row="1"
+         Grid.Column="1"
+         ItemsSource="{Binding HistoryMessage, Mode=TwoWay}"
+        >
+            
+        </DataGrid>
+    
+
+
+        <StackPanel Orientation="Horizontal"
+                     Grid.Row="2"
+                     Grid.Column="1" >
+            <TextBox Text="{Binding MessageSend.Message}"
+            Width="350"
+            Height="50"
+          
+            HorizontalAlignment="Left">
+
+            </TextBox>
+            <Button 
+             Content="Send" 
+             Command="{Binding SendCommand}"
+                Margin="10" 
+                Height="50" 
+                />
+        </StackPanel>
 
     </Grid>
 </UserControl>

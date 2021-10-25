@@ -20,9 +20,11 @@
   </PropertyGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <Import Project="$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props" Condition="Exists('$(NuGetPackageRoot)entityframework\6.4.4\buildTransitive\netcoreapp3.0\EntityFramework.props')" />
+    <Import Project="C:\Program Files (x86)\DevExpress 21.1\.NET Core Desktop Libraries\Offline Packages\devexpress.data.desktop\21.1.5\build\DevExpress.Data.Desktop.props" Condition="Exists('C:\Program Files (x86)\DevExpress 21.1\.NET Core Desktop Libraries\Offline Packages\devexpress.data.desktop\21.1.5\build\DevExpress.Data.Desktop.props')" />
   </ImportGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <PkgNewtonsoft_Json Condition=" '$(PkgNewtonsoft_Json)' == '' ">C:\Users\bakhtawar\.nuget\packages\newtonsoft.json\10.0.1</PkgNewtonsoft_Json>
     <PkgEntityFramework Condition=" '$(PkgEntityFramework)' == '' ">C:\Users\bakhtawar\.nuget\packages\entityframework\6.4.4</PkgEntityFramework>
+    <PkgDevExpress_Wpf_Core Condition=" '$(PkgDevExpress_Wpf_Core)' == '' ">C:\Program Files (x86)\DevExpress 21.1\.NET Core Desktop Libraries\Offline Packages\devexpress.wpf.core\21.1.5</PkgDevExpress_Wpf_Core>
   </PropertyGroup>
 </Project>

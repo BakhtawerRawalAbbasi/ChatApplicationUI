@@ -9,6 +9,7 @@ namespace Chat_Application_Clients.ViewModel
 {
     public class NavigateRegistrationPage : CommandBase
     {
+        NavigationStores navigationStore = new NavigationStores();
         private readonly NavigationStores _navigationStore;
 
         public NavigateRegistrationPage()
@@ -21,7 +22,8 @@ namespace Chat_Application_Clients.ViewModel
         }
         public override void Execute(object parameter)
         {
-            _navigationStore.CurrentViewModel = new RegistrationViewModel();
+           
+            _navigationStore.CurrentViewModel = new RegistrationViewModel(navigationStore);
         }
     }
 }

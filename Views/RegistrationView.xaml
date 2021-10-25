@@ -53,8 +53,7 @@
 
                     </Border>
 
-                    <Button  Content="I already have an account" Command="{Binding NavigateLoginPage}" HorizontalAlignment="Center" Margin="20 "/>
-
+                   
                 </StackPanel>
             </ScrollViewer>
 

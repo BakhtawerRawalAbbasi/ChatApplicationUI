@@ -1,11 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "omRRkmuZC9xkSNHYpLhhJ1lPpM3NbUzbXB6vqqbitzgPXC/D//IR1raiMMzavDXV30Gu8uDav/OXE6jgK+Mzag==",
+  "dgSpecHash": "lcd/R52dKpima3u74ZUhpaDyj0Yav+97hfI8DIdZCCwM2eF0n/YxRIZLUt0vKqJRdyYfABqHqyU0Sl4JDwPKkw==",
   "success": true,
   "projectFilePath": "C:\\Users\\bakhtawar\\source\\repos\\Chat_Application_Clients\\Chat_Application_Clients.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bakhtawar\\.nuget\\packages\\asyncio\\0.1.69\\asyncio.0.1.69.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\devexpress.data\\19.2.6\\devexpress.data.19.2.6.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\devexpress.data\\21.1.6\\devexpress.data.21.1.6.nupkg.sha512",
+    "C:\\Program Files (x86)\\DevExpress 21.1\\.NET Core Desktop Libraries\\Offline Packages\\devexpress.data.desktop\\21.1.5\\devexpress.data.desktop.21.1.5.nupkg.sha512",
+    "C:\\Program Files (x86)\\DevExpress 21.1\\.NET Core Desktop Libraries\\Offline Packages\\devexpress.mvvm\\21.1.5\\devexpress.mvvm.21.1.5.nupkg.sha512",
+    "C:\\Program Files (x86)\\DevExpress 21.1\\.NET Core Desktop Libraries\\Offline Packages\\devexpress.pdf.core\\21.1.5\\devexpress.pdf.core.21.1.5.nupkg.sha512",
+    "C:\\Program Files (x86)\\DevExpress 21.1\\.NET Core Desktop Libraries\\Offline Packages\\devexpress.pdf.drawing\\21.1.5\\devexpress.pdf.drawing.21.1.5.nupkg.sha512",
+    "C:\\Program Files (x86)\\DevExpress 21.1\\.NET Core Desktop Libraries\\Offline Packages\\devexpress.printing.core\\21.1.5\\devexpress.printing.core.21.1.5.nupkg.sha512",
+    "C:\\Program Files (x86)\\DevExpress 21.1\\.NET Core Desktop Libraries\\Offline Packages\\devexpress.wpf.core\\21.1.5\\devexpress.wpf.core.21.1.5.nupkg.sha512",
+    "C:\\Program Files (x86)\\DevExpress 21.1\\.NET Core Desktop Libraries\\Offline Packages\\devexpress.wpf.themes.office2019colorful\\21.1.5\\devexpress.wpf.themes.office2019colorful.21.1.5.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\devexpress.xpo\\19.2.6\\devexpress.xpo.19.2.6.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
@@ -18,19 +25,12 @@
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.10\\microsoft.entityframeworkcore.sqlserver.5.0.10.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.configuration\\1.1.2\\microsoft.extensions.configuration.1.1.2.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\1.1.2\\microsoft.extensions.configuration.fileextensions.1.1.2.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.configuration.json\\1.1.2\\microsoft.extensions.configuration.json.1.1.2.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.2\\microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\1.1.1\\microsoft.extensions.fileproviders.abstractions.1.1.1.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\1.1.1\\microsoft.extensions.fileproviders.physical.1.1.1.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\1.1.1\\microsoft.extensions.filesystemglobbing.1.1.1.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.platformabstractions\\1.1.0\\microsoft.extensions.platformabstractions.1.1.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.identity.client\\4.14.0\\microsoft.identity.client.4.14.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\5.6.0\\microsoft.identitymodel.jsonwebtokens.5.6.0.nupkg.sha512",
@@ -40,7 +40,6 @@
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.identitymodel.tokens\\5.6.0\\microsoft.identitymodel.tokens.5.6.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\nacl.net\\0.1.13\\nacl.net.0.1.13.nupkg.sha512",
@@ -66,6 +65,7 @@
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.data.sqlclient\\4.8.1\\system.data.sqlclient.4.8.1.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.diagnostics.diagnosticsource\\5.0.1\\system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.diagnostics.performancecounter\\4.5.0\\system.diagnostics.performancecounter.4.5.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.diagnostics.tools\\4.3.0\\system.diagnostics.tools.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.diagnostics.tracing\\4.3.0\\system.diagnostics.tracing.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512",
@@ -76,18 +76,16 @@
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.io.filesystem\\4.3.0\\system.io.filesystem.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.io.filesystem.primitives\\4.3.0\\system.io.filesystem.primitives.4.3.0.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.io.filesystem.watcher\\4.3.0\\system.io.filesystem.watcher.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.linq\\4.3.0\\system.linq.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.linq.expressions\\4.3.0\\system.linq.expressions.4.3.0.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.net.http.winhttphandler\\4.4.0\\system.net.http.winhttphandler.4.4.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.net.nameresolution\\4.3.0\\system.net.nameresolution.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.net.primitives\\4.3.0\\system.net.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.objectmodel\\4.3.0\\system.objectmodel.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.private.datacontractserialization\\4.3.0\\system.private.datacontractserialization.4.3.0.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.private.servicemodel\\4.4.0\\system.private.servicemodel.4.4.0.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.private.servicemodel\\4.6.0\\system.private.servicemodel.4.6.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.private.uri\\4.3.2\\system.private.uri.4.3.2.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.reflection.dispatchproxy\\4.4.0\\system.reflection.dispatchproxy.4.4.0.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.reflection.dispatchproxy\\4.5.0\\system.reflection.dispatchproxy.4.5.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.3.0\\system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.reflection.emit.lightweight\\4.3.0\\system.reflection.emit.lightweight.4.3.0.nupkg.sha512",
@@ -106,28 +104,100 @@
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.runtime.serialization.primitives\\4.3.0\\system.runtime.serialization.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.security.cryptography.pkcs\\4.5.2\\system.security.cryptography.pkcs.4.5.2.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.security.cryptography.primitives\\4.3.0\\system.security.cryptography.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.7.0\\system.security.cryptography.protecteddata.4.7.0.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.security.cryptography.xml\\4.5.0\\system.security.cryptography.xml.4.5.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.security.securestring\\4.3.0\\system.security.securestring.4.3.0.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.servicemodel.http\\4.4.0\\system.servicemodel.http.4.4.0.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.servicemodel.primitives\\4.4.0\\system.servicemodel.primitives.4.4.0.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.servicemodel.http\\4.5.0\\system.servicemodel.http.4.5.0.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.servicemodel.primitives\\4.6.0\\system.servicemodel.primitives.4.6.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.threading.overlapped\\4.3.0\\system.threading.overlapped.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.threading.tasks.extensions\\4.3.0\\system.threading.tasks.extensions.4.3.0.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.threading.thread\\4.3.0\\system.threading.thread.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.windows.interactivity.wpf\\2.0.20525\\system.windows.interactivity.wpf.2.0.20525.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: DevExpress.Xpo 19.2.6 requires DevExpress.Data (= 19.2.6) but version DevExpress.Data 21.1.6 was resolved.",
+      "libraryId": "DevExpress.Data",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: DevExpress.Wpf.Core 21.1.5 requires DevExpress.Data (= 21.1.5) but version DevExpress.Data 21.1.6 was resolved.",
+      "libraryId": "DevExpress.Data",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: DevExpress.Data.Desktop 21.1.5 requires DevExpress.Data (= 21.1.5) but version DevExpress.Data 21.1.6 was resolved.",
+      "libraryId": "DevExpress.Data",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: DevExpress.Pdf.Core 21.1.5 requires DevExpress.Data (= 21.1.5) but version DevExpress.Data 21.1.6 was resolved.",
+      "libraryId": "DevExpress.Data",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: DevExpress.Printing.Core 21.1.5 requires DevExpress.Data (= 21.1.5) but version DevExpress.Data 21.1.6 was resolved.",
+      "libraryId": "DevExpress.Data",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1608",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package version outside of dependency constraint: DevExpress.Pdf.Drawing 21.1.5 requires DevExpress.Data (= 21.1.5) but version DevExpress.Data 21.1.6 was resolved.",
+      "libraryId": "DevExpress.Data",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'System.Windows.Interactivity.WPF 2.0.20525' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "System.Windows.Interactivity.WPF",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    }
+  ]
 }

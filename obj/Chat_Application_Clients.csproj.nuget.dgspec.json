@@ -55,6 +55,10 @@
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "dependencies": {
+            "DevExpress.Data": {
+              "target": "Package",
+              "version": "[21.1.6, )"
+            },
             "DevExpress.Xpo": {
               "target": "Package",
               "version": "[19.2.6, )"
@@ -70,6 +74,14 @@
             "NetMQ": {
               "target": "Package",
               "version": "[4.0.1.6, )"
+            },
+            "System.Windows.Interactivity.WPF": {
+              "target": "Package",
+              "version": "[2.0.20525, )"
+            },
+            "devexpress.wpf.core": {
+              "target": "Package",
+              "version": "[21.1.5, )"
             }
           },
           "imports": [
@@ -86,7 +98,7 @@
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             },
-            "Microsoft.WindowsDesktop.App.WPF": {
+            "Microsoft.WindowsDesktop.App": {
               "privateAssets": "none"
             }
           },

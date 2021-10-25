@@ -14,10 +14,12 @@ namespace Chat_Application_Clients.ViewModel
     {
         UserService userInFO;
         private UserLoginRequest currentEmployee;
+        private SenderReceiverEmial senderEmail;
         private DataCommunication communication1;
         UserLoginResponse userRegistation;
         UserLoginRequest userLogin;
         ResponsetoListUser userList;
+        LoginUser loginUser;
 
 
         public NavigationStores navigation { get; set; }
@@ -27,19 +29,24 @@ namespace Chat_Application_Clients.ViewModel
             set { currentEmployee = value; OnPropertyChanged("CurrentEmployee"); }
         }
 
+        public SenderReceiverEmial SenderEmail
+        {
+            get { return senderEmail; }
+            set { senderEmail = value; OnPropertyChanged("SenderEmail"); }
+        }
+
 
         public ICommand NavigateRegistrationPage { get; }
 
-        public ICommand NavigateChatPage { get; }
+   
         public LoginViewModel(NavigationStores navigationStore)
         {
             navigation = navigationStore;
             userInFO = new UserService();
             NavigateRegistrationPage = new NavigateRegistrationPage(navigationStore);
-            NavigateChatPage = new NavigateChatPage(navigationStore);
-            communication1 = new DataCommunication();
-            // mWindow = window;
+            communication1 = DataCommunication.Instance;
             CurrentEmployee = new UserLoginRequest();
+            SenderEmail = new SenderReceiverEmial();
             communication1.Mess_Send += C1_Mess_Received;
             LoginCommand = new RelayCommand(Login);
 
@@ -50,7 +57,7 @@ namespace Chat_Application_Clients.ViewModel
         {
 
         }
-        // Command for login
+
         public ICommand LoginCommand { get; set; }
 
         public void C1_Mess_Received(object mess, string messType)
@@ -61,56 +68,40 @@ namespace Chat_Application_Clients.ViewModel
                 if (userRegistation.response == "succefull")
                 {
                     communication1.DataSend("Current User Login");
-                }
-                else
-                {
-                    MessageBox.Show("Invalid User Name and Password");
+               
                 }
 
+                else if (userRegistation.response == "Invalid")
+                {
+                    MessageBox.Show("Invalid name and password");
+
+                }
+
+                
 
             }
 
             else if (messType == "Current User Login")
             {
-               
-                 if(messType== "Current User Login")
-                {
+          
                     userList = (ResponsetoListUser)mess;
                     navigation.CurrentViewModel = new ChatPageViewModel(userList);
-
-                   // OnReceivedMess(mess, messType);
-                }
-
-
-
             }
+
+
            
-        }
-
-        //protected virtual void OnReceivedMess(object mess, string messType)
-     //   {
-
-            // this method notify all subscriber
-           // if (MessToChatPage != null)
-                // Raise an event
-          //      MessToChatPage(mess, messType);
-      //  }
 
 
-        public void UserListAdd(UserLoginRequest CurrentEmployee)
-        {
-            userInFO.AddUser(CurrentEmployee);
 
         }
-        // secure string passed in from the view for user to logged into 
+
+
+
+
         public void Login()
         {
-            string email = CurrentEmployee.Email;
-
-            var password = CurrentEmployee.Password;
-
+            RetreiveSenderEmail.Instance.SenderEmailID= CurrentEmployee.Email;
             communication1.DataSend<UserLoginRequest>(CurrentEmployee,"Login Request");
-
 
         }
     }

@@ -12,7 +12,7 @@ namespace Chat_Application_Clients.Stores
         public event Action CurrentViewModelChanged;
 
         public BaseViewModel _currentViewModel;
-        public BaseViewModel CurrentViewModel 
+        public BaseViewModel CurrentViewModel
         {
             get => _currentViewModel;
 

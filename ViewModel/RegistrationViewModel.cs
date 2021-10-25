@@ -14,67 +14,82 @@ namespace Chat_Application_Clients.ViewModel
 {
    public class RegistrationViewModel : BaseViewModel
     {
+        public NavigationStores navigation { get; set; }
         private RequesttoSignUP currentEmployee;
         private DataCommunication communication1;
+        private ResponsetoSignUP registrationResponse;
+        ResponsetoListUser userList;
         public RequesttoSignUP CurrentEmployee
         {
             get { return currentEmployee; }
             set { currentEmployee = value; OnPropertyChanged("CurrentEmployee"); }
         }
-        // Client_socket client_Socket = new Client_socket();
-        //  private Window mWindow;
-        // public string Email { get; set; }
+        
+        public RegistrationViewModel(NavigationStores navigationStore)
+        {
+            navigation = navigationStore;
+            communication1 = DataCommunication.Instance;
+            CurrentEmployee = new RequesttoSignUP();
+            communication1.Mess_Send += C1_Mess_Received;
+            RegisterationCommand = new RelayCommand(Register);
+       
 
-        // public string Password { get; set; }
-
-        // we never strore password string in memory directly // it will encrypt tries to inject into your application ,its store password safely
-
-       // public ICommand NavigateLoginPage { get; }
-
+        }
         public RegistrationViewModel()
         {
-           // NavigateLoginPage = new NavigateLoginPage(navigationStore);
-            communication1 = new DataCommunication();
+            communication1 = DataCommunication.Instance;
             // mWindow = window;
             CurrentEmployee = new RequesttoSignUP();
             communication1.Mess_Send += C1_Mess_Received;
             RegisterationCommand = new RelayCommand(Register);
-            //AccessibilityCommand = new RelayCommand(LoginPage);
+         
 
         }
-
         public ICommand RegisterationCommand { get; set; }
 
      //   public ICommand AccessibilityCommand { get; set; }
         public void C1_Mess_Received(object mess, string messType)
         {
-            if (mess == "succefull")
+
+            if (messType == "Registration")
             {
+                registrationResponse = (ResponsetoSignUP)mess;
+
+                if (registrationResponse.registrationResponse == "succefull")
+                {
+                    communication1.DataSend("Current User Login");
+                }
+
+                if (registrationResponse.registrationResponse == "Email ID already Exit")
+
+                {
+                    MessageBox.Show("Email ID already Exit");
+
+                }
+
+
+
 
             }
-            else
+
+            else if (messType == "Current User Login")
             {
-                MessageBox.Show("Invalid User Name and Password");
+
+                userList = (ResponsetoListUser)mess;
+                navigation.CurrentViewModel = new ChatPageViewModel(userList);
+
             }
 
+
+            
 
         }
 
-
-
-        // secure string passed in from the view for user to logged into 
         public void Register()
         {
             string email = CurrentEmployee.Email;
-            // var email = this.Email;
-            // var password = this.Password;
+      
             var password = CurrentEmployee.Password;
-
-
-
-            // CommunicationLayer.DataCommunicate.DataReceived(currentEmployee);
-
-            //CommunicationLayer.DataCommunication communication = new DataCommunication();
             communication1.DataSend<RequesttoSignUP>(CurrentEmployee, "Registration");
 
 

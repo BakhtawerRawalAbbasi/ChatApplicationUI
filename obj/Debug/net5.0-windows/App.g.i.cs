@@ -10,6 +10,7 @@
 //------------------------------------------------------------------------------
 
 using Chat_Application_Clients;
+using DevExpress.Xpf.DXBinding;
 using System;
 using System.Diagnostics;
 using System.Windows;
@@ -19,6 +20,7 @@ using System.Windows.Controls.Primitives;
 using System.Windows.Controls.Ribbon;
 using System.Windows.Data;
 using System.Windows.Documents;
+using System.Windows.Forms.Integration;
 using System.Windows.Ink;
 using System.Windows.Input;
 using System.Windows.Markup;
@@ -59,7 +61,7 @@ namespace Chat_Application_Clients {
             
             #line default
             #line hidden
-            System.Uri resourceLocater = new System.Uri("/Chat_Application_Clients;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Chat_Application_Clients;V1.0.0.0;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
