@@ -22,6 +22,7 @@ namespace Chat_Application_Clients.ViewModel
         private DataCommunication communication1;
         private SenderReceiverEmial senderreceiverEmail;
         ResponseOfHistoryMessages responseHistoryMessage;
+        RequestToSendMess newMessage;
         public string message;
         public NavigationStores navigation { get; set; }
         public DelegateCommand<object> ItemSelectionChanged { get; private set; }
@@ -136,9 +137,20 @@ namespace Chat_Application_Clients.ViewModel
 
             }
 
-            else if(messType=="Login User")
+            else if(messType== "Message Receive Request")
             {
+                newMessage = (RequestToSendMess)mess;
+               
+                // ObservableCollection created on UI thread can only modify  from UI thread
+                // not from other threads to update objects created on UI thread from different thread,
+                // simply put the delegate on UI Dispatcher and that will do work  delegating it to UI thread.
 
+                App.Current.Dispatcher.Invoke((Action)delegate
+                    {
+                       // HistoryMessage.Add()
+                    });
+
+                
             }
 
         }

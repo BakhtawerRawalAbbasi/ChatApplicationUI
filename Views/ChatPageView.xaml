@@ -9,86 +9,90 @@
              d:DataContext="{d:DesignInstance Type=viewmodel:ChatPageViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Margin="15">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300" />
-            <ColumnDefinition Width="*" />
-        </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
+    <Border Background="{StaticResource WordBlueBrush}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-        <Button Name="btnDelete"
-                    Content="Log Out"
-                    Margin="70,8"
-                    Padding="3"
-                   />
-
-
-        <DataGrid 
+            <DataGrid 
             Name="dgEmployees"
             AlternatingRowBackground="LightBlue"
             AlternationCount="2"
             AutoGenerateColumns="False"
             Background="Azure"
             IsReadOnly="True"
-            Grid.Row="1"
             Grid.Column="0"
             ItemsSource="{Binding UserList, Mode=TwoWay}"
        
             >
-
             <DataGrid.Columns>
-                <DataGridTextColumn Header="User Name"
+                    <DataGridTextColumn Header="User Name"
                                     Width="AUTO" 
                                     Binding="{Binding UserName, Mode=TwoWay}"/>
-                <DataGridTextColumn Header="Email ID"
+                    <DataGridTextColumn Header="Email ID"
                                     Width="AUTO"
                                     Binding="{Binding EmailID , Mode=TwoWay}"/>
+                    <DataGridTextColumn Header="Status"
+                                    Width="AUTO"
+                                    Binding="{Binding Status , Mode=TwoWay}"/>
 
-            </DataGrid.Columns>
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="MouseDoubleClick">
-                    <i:InvokeCommandAction Command="{Binding ItemSelectionChanged}"
+                </DataGrid.Columns>
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="MouseDoubleClick">
+                        <i:InvokeCommandAction Command="{Binding ItemSelectionChanged}"
                                    CommandParameter="{Binding  ElementName=dgEmployees ,Path=SelectedItem}" />
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-        </DataGrid>
-        <DataGrid 
-         Name="dgvMessages"
-         Width="400" 
-         Height="200"
-         Background="Azure"
-         IsReadOnly="True"
-         Grid.Row="1"
-         Grid.Column="1"
-         ItemsSource="{Binding HistoryMessage, Mode=TwoWay}"
-        >
-            
-        </DataGrid>
-    
-
-
-        <StackPanel Orientation="Horizontal"
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </DataGrid>
+           
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="User Name"
+                           HorizontalAlignment="Center"
+                           FontSize="{StaticResource FontSizeRegular}"
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           Margin="10"
+                           />
+                <DataGrid 
+                 Name="dgvMessages"
+                 Background="Azure"
+                 IsReadOnly="True"
+                 Grid.Column="1"
+                 Grid.Row="1"
+                 Margin="10"
+                 ItemsSource="{Binding HistoryMessage, Mode=TwoWay}"
+                 >
+                 </DataGrid>
+                 <StackPanel Orientation="Horizontal"
                      Grid.Row="2"
                      Grid.Column="1" >
-            <TextBox Text="{Binding MessageSend.Message}"
-            Width="350"
-            Height="50"
-          
-            HorizontalAlignment="Left">
+                    <TextBox Text="{Binding MessageSend.Message}"
+                             Width="300"
+                             Height="50"
+                             Margin="10"
+                             HorizontalAlignment="Left">
 
-            </TextBox>
-            <Button 
-             Content="Send" 
-             Command="{Binding SendCommand}"
-                Margin="10" 
-                Height="50" 
-                />
-        </StackPanel>
+                    </TextBox>
+                    <Button 
+                           Content="Send" 
+                           Command="{Binding SendCommand}"
+                           Margin="5" 
+                           Height="50" 
+                    />
+                </StackPanel>
+            </Grid>
+        </Grid>
 
-    </Grid>
+       
+    </Border>
+
+
 </UserControl>

@@ -61,7 +61,7 @@ namespace Chat_Application_Clients {
             
             #line default
             #line hidden
-            System.Uri resourceLocater = new System.Uri("/Chat_Application_Clients;V1.0.0.0;component/app.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Chat_Application_Clients;component/app.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\App.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

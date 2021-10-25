@@ -1,4 +1,4 @@
-﻿C:\Users\bakhtawar\source\repos\Chat_Application_Clients\obj\Debug\net5.0-windows\GeneratedInternalTypeHelper.g.cs
+﻿
 FC:\Users\bakhtawar\source\repos\Chat_Application_Clients\App.xaml;;
 FC:\Users\bakhtawar\source\repos\Chat_Application_Clients\MainWindow.xaml;;
 FC:\Users\bakhtawar\source\repos\Chat_Application_Clients\Styles\Buttons.xaml;;
@@ -7,6 +7,7 @@ FC:\Users\bakhtawar\source\repos\Chat_Application_Clients\Styles\Fonts.xaml;;
 FC:\Users\bakhtawar\source\repos\Chat_Application_Clients\Styles\Texts.xaml;;
 FC:\Users\bakhtawar\source\repos\Chat_Application_Clients\Styles\Windows.xaml;;
 FC:\Users\bakhtawar\source\repos\Chat_Application_Clients\Views\BindablePasswordBox.xaml;;
+FC:\Users\bakhtawar\source\repos\Chat_Application_Clients\Views\ChatListItemControl.xaml;;
 FC:\Users\bakhtawar\source\repos\Chat_Application_Clients\Views\ChatPageView.xaml;;
 FC:\Users\bakhtawar\source\repos\Chat_Application_Clients\Views\LoginView.xaml;;
 FC:\Users\bakhtawar\source\repos\Chat_Application_Clients\Views\RegistrationView.xaml;;

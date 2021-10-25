@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:Chat_Application_Clients"
         xmlns:viewmodels="clr-namespace:Chat_Application_Clients.ViewModel" 
         xmlns:views="clr-namespace:Chat_Application_Clients.Views" d:DataContext="{d:DesignInstance Type=viewmodels:MainViewModel}"
-        Title="MainWindow" Height="550" Width="800"
-          mc:Ignorable="d">
+        Title="Chat Application" Height="550" Width="800"
+        mc:Ignorable="d" ResizeMode="CanResize">
 
     <ContentControl Content="{Binding CurrentViewModel}">
         <ContentControl.Resources>

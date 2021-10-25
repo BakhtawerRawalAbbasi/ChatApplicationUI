@@ -7,9 +7,12 @@
              xmlns:vm="clr-namespace:Chat_Application_Clients" xmlns:viewmodel="clr-namespace:Chat_Application_Clients.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:RegistrationViewModel}"
              mc:Ignorable="d" 
              d:DesignHeight="550" d:DesignWidth="800">
-    <Border >
+
+    <Border Background="{StaticResource WordBlueBrush}">
         <Grid>
-            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Margin="0 0 0 0">
+
+            <!-- Main content scroll -->
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                 <StackPanel 
                     VerticalAlignment="Center"
                     HorizontalAlignment="Center"
@@ -32,31 +35,39 @@
 
                             <!-- Sign up subtext-->
                             <TextBlock Text="It's about to get fun" 
-                                       FontSize="{StaticResource FontSizeRegular}"
+                                       FontSize="{StaticResource FontSizeLarge}"
                                        Foreground="{StaticResource ForegroundDarkBrush}"
                                        Margin="0 0 0 20"
                                        />
-
-                            <!-- Name -->
-                            <TextBox Tag="Name" Text="{Binding CurrentEmployee.UserName}" />
+                            <!-- User Name -->
+                            <TextBox Text="{Binding CurrentEmployee.UserName}" Tag="User Name" />
 
                             <!-- Email -->
-                            <TextBox Tag="Email" Text="{Binding CurrentEmployee.Email}" />
+                            <TextBox Text="{Binding CurrentEmployee.Email}" Tag="Email" />
 
                             <!-- Password -->
-                            <TextBox Tag="Password" Text="{Binding CurrentEmployee.Password}"/>
+                            <TextBox  x:Name="PasswordText" Tag="Password" Text="{Binding CurrentEmployee.Password}" Margin="0 0 0 30" />
 
                             <!-- Next button -->
-                            <Button  Content="Next" Command="{Binding RegisterationCommand}"  HorizontalAlignment="Center" Width="100"/>
+                            <Button Content="Register" 
+                                    Command="{Binding RegisterationCommand}" 
+                                    CommandParameter="{Binding ElementName=Page}" 
+                                    HorizontalAlignment="Center" />
 
                         </StackPanel>
 
                     </Border>
 
-                   
+                    <Button 
+                        Style="{StaticResource TextButton}" 
+                        Content="Or, I already have an account..." 
+                         Command="{Binding NavigateLoginPage}"
+                        HorizontalAlignment="Center" 
+                     
+                        />
+
                 </StackPanel>
             </ScrollViewer>
-
         </Grid>
     </Border>
 </UserControl>

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET5_0;NETCOREAPP
 C:\Users\bakhtawar\source\repos\Chat_Application_Clients\App.xaml
-102088364148
+11-188115350
 
-19-2076054122
-245-566556565
-MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\Texts.xaml;Styles\Windows.xaml;Views\BindablePasswordBox.xaml;Views\ChatPageView.xaml;Views\LoginView.xaml;Views\RegistrationView.xaml;
+2115874707
+247-1865107809
+MainWindow.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\Texts.xaml;Styles\Windows.xaml;Views\BindablePasswordBox.xaml;Views\ChatListItemControl.xaml;Views\ChatPageView.xaml;Views\LoginView.xaml;Views\RegistrationView.xaml;
 
 False
 

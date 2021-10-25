@@ -71,6 +71,10 @@
               "target": "Package",
               "version": "[5.0.10, )"
             },
+            "Microsoft.WindowsAPICodePack-Shell": {
+              "target": "Package",
+              "version": "[1.1.0, )"
+            },
             "NetMQ": {
               "target": "Package",
               "version": "[4.0.1.6, )"

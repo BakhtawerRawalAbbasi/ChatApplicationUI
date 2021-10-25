@@ -30,6 +30,7 @@ namespace Chat_Application_Clients.ViewModel
             navigation = navigationStore;
             communication1 = DataCommunication.Instance;
             CurrentEmployee = new RequesttoSignUP();
+            NavigateLoginPage = new NavigateLoginPage(navigationStore);
             communication1.Mess_Send += C1_Mess_Received;
             RegisterationCommand = new RelayCommand(Register);
        
@@ -42,12 +43,13 @@ namespace Chat_Application_Clients.ViewModel
             CurrentEmployee = new RequesttoSignUP();
             communication1.Mess_Send += C1_Mess_Received;
             RegisterationCommand = new RelayCommand(Register);
-         
+       
 
         }
         public ICommand RegisterationCommand { get; set; }
 
-     //   public ICommand AccessibilityCommand { get; set; }
+        public ICommand NavigateLoginPage { get; }
+        //   public ICommand AccessibilityCommand { get; set; }
         public void C1_Mess_Received(object mess, string messType)
         {
 

@@ -101,3 +101,7 @@ C:\Users\bakhtawar\source\repos\Chat_Application_Clients\bin\Debug\net5.0-window
 C:\Users\bakhtawar\source\repos\Chat_Application_Clients\bin\Debug\net5.0-windows\System.Private.ServiceModel.dll
 C:\Users\bakhtawar\source\repos\Chat_Application_Clients\bin\Debug\net5.0-windows\System.ServiceModel.Http.dll
 C:\Users\bakhtawar\source\repos\Chat_Application_Clients\bin\Debug\net5.0-windows\System.ServiceModel.dll
+C:\Users\bakhtawar\source\repos\Chat_Application_Clients\bin\Debug\net5.0-windows\Microsoft.WindowsAPICodePack.Shell.dll
+C:\Users\bakhtawar\source\repos\Chat_Application_Clients\bin\Debug\net5.0-windows\Microsoft.WindowsAPICodePack.ShellExtensions.dll
+C:\Users\bakhtawar\source\repos\Chat_Application_Clients\obj\Debug\net5.0-windows\Views\ChatListItemControl.g.cs
+C:\Users\bakhtawar\source\repos\Chat_Application_Clients\obj\Debug\net5.0-windows\Views\ChatListItemControl.baml

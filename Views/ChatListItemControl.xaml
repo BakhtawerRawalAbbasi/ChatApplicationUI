@@ -1,0 +1,64 @@
+﻿<UserControl x:Class="Chat_Application_Clients.Views.ChatListItemControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+               xmlns:local="clr-namespace:Chat_Application_Clients.Views" 
+             xmlns:viewmodel="clr-namespace:Chat_Application_Clients.ViewModel"
+             d:DataContext="{d:DesignInstance Type=viewmodel:ChatPageViewModel}"
+             mc:Ignorable="d" 
+            d:DesignHeight="60" d:DesignWidth="800">
+    <Grid  Background="Transparent">
+        <Grid.ColumnDefinitions>
+            <!-- New Message Indicator Bar -->
+            <ColumnDefinition Width="Auto" />
+            <!-- Profile picture -->
+            <ColumnDefinition Width="Auto" />
+            <!-- Main content -->
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- New Message Indicator Bar -->
+        <Border Background="Red" 
+                Width="4"
+                                    />
+
+        <!-- Profile picture padding -->
+        <Border Grid.Column="1" Padding="8">
+            <!-- Profile picture background -->
+            <Border Background="{StaticResource WordBlueBrush}" 
+                                        Width="{Binding ActualHeight, RelativeSource={RelativeSource Self}}"
+                                        CornerRadius="{Binding ActualHeight, RelativeSource={RelativeSource Self}}">
+                <!-- Profile picture initials -->
+                <TextBlock Text="LM"
+                           VerticalAlignment="Center"
+                           HorizontalAlignment="Center"
+                           Foreground="{StaticResource ForegroundLightBrush}"
+                           FontSize="{StaticResource FontSizeLarge}"
+                           FontFamily="{StaticResource LatoRegular}"
+                           />
+            </Border>
+        </Border>
+
+        <!-- Main content -->
+        <Border Grid.Column="2" Padding="0 0 8 0">
+            <StackPanel Grid.Column="2" VerticalAlignment="Center">
+                <!-- Name-->
+                <TextBlock Text="Luke"
+                           Foreground="{StaticResource WordBlueBrush}"
+                           TextTrimming="CharacterEllipsis"
+                           FontFamily="{StaticResource LatoRegular}"
+                                                />
+                <!-- Message -->
+                <TextBlock Text="This chat is comming from sender"
+                                               Foreground="{StaticResource ForegroundDarkBrush}"
+                                               TextTrimming="CharacterEllipsis"
+                                               FontFamily="{StaticResource LatoRegular}"
+                                               />
+
+            </StackPanel>
+        </Border>
+
+    </Grid>
+
+</UserControl>
