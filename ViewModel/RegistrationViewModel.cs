@@ -92,6 +92,7 @@ namespace Chat_Application_Clients.ViewModel
             string email = CurrentEmployee.Email;
       
             var password = CurrentEmployee.Password;
+            RetreiveSenderEmail.Instance.SenderName = CurrentEmployee.UserName;
             communication1.DataSend<RequesttoSignUP>(CurrentEmployee, "Registration");
 
 

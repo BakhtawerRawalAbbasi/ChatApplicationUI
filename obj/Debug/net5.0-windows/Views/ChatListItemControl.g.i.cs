@@ -56,7 +56,7 @@ namespace Chat_Application_Clients.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Chat_Application_Clients;component/views/chatlistitemcontrol.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Chat_Application_Clients;V1.0.0.0;component/views/chatlistitemcontrol.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\ChatListItemControl.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

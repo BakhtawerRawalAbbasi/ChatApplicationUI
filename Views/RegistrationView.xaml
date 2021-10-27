@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:Chat_Application_Clients.Views" 
              xmlns:vm="clr-namespace:Chat_Application_Clients" xmlns:viewmodel="clr-namespace:Chat_Application_Clients.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:RegistrationViewModel}"
              mc:Ignorable="d" 
-             d:DesignHeight="550" d:DesignWidth="800">
+             d:DesignHeight="600" d:DesignWidth="800">
 
     <Border Background="{StaticResource WordBlueBrush}">
         <Grid>

@@ -54,12 +54,13 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
-                <TextBlock Text="User Name"
+                <TextBlock Text="UserName"
                            HorizontalAlignment="Center"
                            FontSize="{StaticResource FontSizeRegular}"
                            Grid.Row="0"
                            Grid.Column="1"
                            Margin="10"
+                           
                            />
                 <DataGrid 
                  Name="dgvMessages"
@@ -75,10 +76,17 @@
                      Grid.Row="2"
                      Grid.Column="1" >
                     <TextBox Text="{Binding MessageSend.Message}"
-                             Width="300"
-                             Height="50"
+                             Tag="Write a message..."
+                             FontSize="{StaticResource FontSizeSmall}"
+                             VerticalAlignment="Center"
+                             BorderThickness="0"
+                             Padding="0 10 10 10"
+                             AcceptsReturn="True"
+                             AcceptsTab="True"
+                             VerticalScrollBarVisibility="Auto"
                              Margin="10"
-                             HorizontalAlignment="Left">
+                             Width="200"
+                             >
 
                     </TextBox>
                     <Button 

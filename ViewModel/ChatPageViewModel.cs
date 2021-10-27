@@ -22,8 +22,9 @@ namespace Chat_Application_Clients.ViewModel
         private DataCommunication communication1;
         private SenderReceiverEmial senderreceiverEmail;
         ResponseOfHistoryMessages responseHistoryMessage;
-        RequestToSendMess newMessage;
+        SenderNewMessage newMessage;
         public string message;
+        public string SenderUserName;
         public NavigationStores navigation { get; set; }
         public DelegateCommand<object> ItemSelectionChanged { get; private set; }
 
@@ -72,9 +73,11 @@ namespace Chat_Application_Clients.ViewModel
             message = MessageSend.Message;
             MessageSend.Sender_Email_ID = RetreiveSenderEmail.Instance.SenderEmailID;
             MessageSend.Receiver_Email_id = SenderReceiverEmailID.ReceiverEmailID;
+            //need changes for time...
             MessageSend.Messag_SendTime = DateTime.Now;
+            MessageSend.SenderName = RetreiveSenderEmail.Instance.SenderName;
             communication1.DataSend<RequestToSendMess>(MessageSend, "Send Message Request");
-
+            
 
         }
 
@@ -82,6 +85,7 @@ namespace Chat_Application_Clients.ViewModel
       
         public ChatPageViewModel(ResponsetoListUser user)
         {
+
             UserList = new ObservableCollection<User>();
             HistoryMessage = new ObservableCollection<HistoryOfMessages>();
             for (int i = 0; i < user.userListResponse.Count; i++)
@@ -94,7 +98,7 @@ namespace Chat_Application_Clients.ViewModel
             MessageSend = new RequestToSendMess();
             SenderReceiverEmailID = new SenderReceiverEmial();
             communication1.Mess_Send += C1_Mess_Received;
-
+         
 
 
 
@@ -102,26 +106,17 @@ namespace Chat_Application_Clients.ViewModel
 
         public void C1_Mess_Received(object mess, string messType)
         {
-
-            if(messType== "History of message")
+            //SenderUserName = RetreiveSenderEmail.Instance.SenderName;
+            if (messType== "History of message")
             {
 
                 responseHistoryMessage = (ResponseOfHistoryMessages)mess;
 
-                if (HistoryMessage.Count != 0)
+                App.Current.Dispatcher.Invoke((Action)delegate
                 {
-
-                    for (int i = 0; i < HistoryMessage.Count; i++)
-                    {
-                        App.Current.Dispatcher.Invoke((Action)delegate
-                        {
-                            HistoryMessage.Remove(HistoryMessage[i]);
-                        });
-                    }
-                }
-                else
-                {
-                    for (int i = 0; i < responseHistoryMessage.historyOfMessages.Count; i++)
+                    HistoryMessage.Clear();
+                });
+                for (int i = 0; i < responseHistoryMessage.historyOfMessages.Count; i++)
                     {
                         // ObservableCollection created on UI thread can only modify  from UI thread
                         // not from other threads to update objects created on UI thread from different thread,
@@ -133,13 +128,13 @@ namespace Chat_Application_Clients.ViewModel
                         });
 
                     }
-                }
+                
 
             }
 
             else if(messType== "Message Receive Request")
             {
-                newMessage = (RequestToSendMess)mess;
+                newMessage = (SenderNewMessage)mess;
                
                 // ObservableCollection created on UI thread can only modify  from UI thread
                 // not from other threads to update objects created on UI thread from different thread,
@@ -147,7 +142,13 @@ namespace Chat_Application_Clients.ViewModel
 
                 App.Current.Dispatcher.Invoke((Action)delegate
                     {
-                       // HistoryMessage.Add()
+                        HistoryOfMessages historyOf = new HistoryOfMessages();
+                        historyOf.SenderName =  newMessage.SenderName;
+                        historyOf.Messages = newMessage.Message;
+                        historyOf.MessageSentTime = newMessage.MessageSendTime;
+                        historyOf.SenderEmail = newMessage.SenderEmailID;
+                        
+                        HistoryMessage.Add(historyOf);
                     });
 
                 

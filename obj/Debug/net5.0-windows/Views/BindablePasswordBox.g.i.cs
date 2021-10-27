@@ -63,7 +63,7 @@ namespace Chat_Application_Clients.Views {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Chat_Application_Clients;component/views/bindablepasswordbox.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Chat_Application_Clients;V1.0.0.0;component/views/bindablepasswordbox.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Views\BindablePasswordBox.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

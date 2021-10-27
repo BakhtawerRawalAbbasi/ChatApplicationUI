@@ -13,7 +13,7 @@ namespace Chat_Application_Clients.ViewModel
         public event PropertyChangedEventHandler PropertyChanged;
         private static RetreiveSenderEmail _instance;
         private string senderEmailID;
-      
+        private string senderName;
 
         public static RetreiveSenderEmail Instance => _instance ?? (_instance = new RetreiveSenderEmail());
 
@@ -26,7 +26,15 @@ namespace Chat_Application_Clients.ViewModel
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SenderEmailID)));
             }
         }
-
+        public string SenderName
+        {
+            get => senderName;
+            set
+            {
+                senderName = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(SenderName)));
+            }
+        }
 
     }
 }
