@@ -9,9 +9,13 @@ namespace Chat_Application_Clients.Stores
 {
      public class NavigationStores
     {
+
+       // public BaseViewModel CurrentViewModel { get; set; }
         public event Action CurrentViewModelChanged;
 
+        
         public BaseViewModel _currentViewModel;
+
         public BaseViewModel CurrentViewModel
         {
             get => _currentViewModel;

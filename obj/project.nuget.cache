@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "U8Ndo2JdAhtjLaKY16aQxlG1IqF2HTZMEkt9wj5IJQ7ymF1T5nkRc3x6M+9iRs7HYHmpKr9Blg06A3SBqRwAGg==",
+  "dgSpecHash": "/4iCx9fGRCQZA68r0VGj3Iw5gYZ+fjDl6fWDLL1+JXYyXl1AkyCFWNbu1SKFzph0AKbBBTmSjBIPSjIXSwD7zQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\bakhtawar\\source\\repos\\Chat_Application_Clients\\Chat_Application_Clients.csproj",
   "expectedPackageFiles": [
@@ -13,16 +13,16 @@
     "C:\\Program Files (x86)\\DevExpress 21.1\\.NET Core Desktop Libraries\\Offline Packages\\devexpress.printing.core\\21.1.5\\devexpress.printing.core.21.1.5.nupkg.sha512",
     "C:\\Program Files (x86)\\DevExpress 21.1\\.NET Core Desktop Libraries\\Offline Packages\\devexpress.wpf.core\\21.1.5\\devexpress.wpf.core.21.1.5.nupkg.sha512",
     "C:\\Program Files (x86)\\DevExpress 21.1\\.NET Core Desktop Libraries\\Offline Packages\\devexpress.wpf.themes.office2019colorful\\21.1.5\\devexpress.wpf.themes.office2019colorful.21.1.5.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\devexpress.xpo\\19.2.6\\devexpress.xpo.19.2.6.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\devexpress.xpo\\21.1.6\\devexpress.xpo.21.1.6.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.10\\microsoft.entityframeworkcore.5.0.10.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.10\\microsoft.entityframeworkcore.abstractions.5.0.10.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.10\\microsoft.entityframeworkcore.analyzers.5.0.10.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.10\\microsoft.entityframeworkcore.relational.5.0.10.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.10\\microsoft.entityframeworkcore.sqlserver.5.0.10.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.11\\microsoft.entityframeworkcore.5.0.11.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.11\\microsoft.entityframeworkcore.abstractions.5.0.11.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.11\\microsoft.entityframeworkcore.analyzers.5.0.11.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.11\\microsoft.entityframeworkcore.relational.5.0.11.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.11\\microsoft.entityframeworkcore.sqlserver.5.0.11.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\5.0.0\\microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.caching.memory\\5.0.0\\microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
@@ -42,7 +42,6 @@
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\microsoft.windowsapicodepack-shell\\1.1.0\\microsoft.windowsapicodepack-shell.1.1.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\nacl.net\\0.1.13\\nacl.net.0.1.13.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\netmq\\4.0.1.6\\netmq.4.0.1.6.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
@@ -112,11 +111,14 @@
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.security.permissions\\4.7.0\\system.security.permissions.4.7.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.security.securestring\\4.3.0\\system.security.securestring.4.3.0.nupkg.sha512",
-    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.servicemodel.http\\4.5.0\\system.servicemodel.http.4.5.0.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.servicemodel.http\\4.5.3\\system.servicemodel.http.4.5.3.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.servicemodel.nettcp\\4.4.4\\system.servicemodel.nettcp.4.4.4.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.servicemodel.primitives\\4.6.0\\system.servicemodel.primitives.4.6.0.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.servicemodel.security\\4.4.4\\system.servicemodel.security.4.4.4.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\bakhtawar\\.nuget\\packages\\system.text.json\\4.6.0\\system.text.json.4.6.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
@@ -130,16 +132,6 @@
     "C:\\Users\\bakhtawar\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
   "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: DevExpress.Xpo 19.2.6 requires DevExpress.Data (= 19.2.6) but version DevExpress.Data 21.1.6 was resolved.",
-      "libraryId": "DevExpress.Data",
-      "targetGraphs": [
-        "net5.0-windows7.0"
-      ]
-    },
     {
       "code": "NU1608",
       "level": "Warning",
@@ -186,16 +178,6 @@
       "warningLevel": 1,
       "message": "Detected package version outside of dependency constraint: DevExpress.Pdf.Drawing 21.1.5 requires DevExpress.Data (= 21.1.5) but version DevExpress.Data 21.1.6 was resolved.",
       "libraryId": "DevExpress.Data",
-      "targetGraphs": [
-        "net5.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.WindowsAPICodePack-Shell 1.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.WindowsAPICodePack-Shell",
       "targetGraphs": [
         "net5.0-windows7.0"
       ]

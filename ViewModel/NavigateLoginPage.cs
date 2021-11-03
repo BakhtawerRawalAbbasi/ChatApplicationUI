@@ -9,20 +9,15 @@ namespace Chat_Application_Clients.ViewModel
 {
     public class NavigateLoginPage : CommandBase
     {
-        NavigationStores navigationStore = new NavigationStores();
+        //NavigationStores navigationStore = new NavigationStores();
         private readonly NavigationStores _navigationStore;
-
-        public NavigateLoginPage()
-        {
-         
-        }
         public NavigateLoginPage(NavigationStores navigationStore)
         {
             _navigationStore = navigationStore;
         }
         public override void Execute(object parameter)
         {
-            _navigationStore.CurrentViewModel = new LoginViewModel(navigationStore);
+            _navigationStore.CurrentViewModel = new LoginViewModel(_navigationStore);
         }
     }
 }

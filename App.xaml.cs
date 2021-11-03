@@ -16,6 +16,10 @@ namespace Chat_Application_Clients
     /// </summary>
     public partial class App : Application
     {
+        public App()
+        {
+            DevExpress.Xpf.Core.ApplicationThemeHelper.UseLegacyDefaultTheme = true;
+        }
 
         protected override void OnStartup(StartupEventArgs e)
         {
@@ -30,7 +34,7 @@ namespace Chat_Application_Clients
         }
         
    
-
+         
 
     }
 }

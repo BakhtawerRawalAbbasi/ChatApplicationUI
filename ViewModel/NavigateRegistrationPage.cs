@@ -12,10 +12,6 @@ namespace Chat_Application_Clients.ViewModel
         NavigationStores navigationStore = new NavigationStores();
         private readonly NavigationStores _navigationStore;
 
-        public NavigateRegistrationPage()
-        {
-        }
-
         public NavigateRegistrationPage(NavigationStores navigationStore)
         {
             _navigationStore = navigationStore;
@@ -23,7 +19,7 @@ namespace Chat_Application_Clients.ViewModel
         public override void Execute(object parameter)
         {
            
-            _navigationStore.CurrentViewModel = new RegistrationViewModel(navigationStore);
+            _navigationStore.CurrentViewModel = new RegistrationViewModel(_navigationStore);
         }
     }
 }

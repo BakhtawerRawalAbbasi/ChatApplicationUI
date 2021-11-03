@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Chat_Application_Clients.Views.LoginView"
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,16 +6,16 @@
              xmlns:local="clr-namespace:Chat_Application_Clients.Views"
              xmlns:vm="clr-namespace:Chat_Application_Clients" 
              xmlns:viewmodel="clr-namespace:Chat_Application_Clients.ViewModel"
-             d:DataContext="{d:DesignInstance Type=viewmodel:LoginViewModel}"
-            
+             xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="Chat_Application_Clients.Views.LoginView"
+             d:DataContext="{d:DesignInstance Type={x:Type viewmodel:LoginViewModel}}"
              mc:Ignorable="d" 
              d:DesignHeight="550" d:DesignWidth="800">
-   
+
 
     <Border Background="{StaticResource WordBlueBrush}">
         <Grid>
             <!-- Blue background image -->
-            
+
             <!-- Main content scroll -->
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
                 <StackPanel 
@@ -46,10 +46,47 @@
                                        />
 
                             <!-- Email -->
-                            <TextBox Tag="Email" Text="{Binding CurrentEmployee.Email}" />
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="Email"
+                                           FontSize="{StaticResource FontSizeLarge}"
+                                           FontFamily ="{StaticResource LatoRegular}"
+                                           Foreground="{StaticResource ForegroundMainBrush}"      
+                                           Padding ="10"
+                                           Margin ="0 5 0 5"  />
+                                <TextBox        
+                                    Text="{Binding CurrentEmployee.Email}"
+                                    FontSize="{StaticResource FontSizeLarge}"
+                                    FontFamily ="{StaticResource LatoRegular}"
+                                    Padding ="10"
+                                    Margin ="0 5 0 5"
+                                    BorderBrush ="{StaticResource WordBlueBrush}"
+                                    BorderThickness ="0 0 0 1"
+                                                 />
+                            </StackPanel>
+
+
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="Password"
+                                           FontSize="{StaticResource FontSizeLarge}"
+                                           FontFamily ="{StaticResource LatoRegular}"
+                                           Foreground="{StaticResource ForegroundMainBrush}"      
+                                           Padding ="10"
+                                                 Margin ="0 5 0 5"
+                                                 
+                                           />
+                                <dxe:PasswordBoxEdit 
+                                                 FontSize="{StaticResource FontSizeLarge}"
+                                                 FontFamily ="{StaticResource LatoRegular}"
+                                                 Padding ="10"
+                                                 Margin ="0 5 0 5"
+                                                 BorderBrush ="{StaticResource WordBlueBrush}"
+                                                 BorderThickness ="0 0 0 1"
+                                                 EditValue="{Binding CurrentEmployee.Password}" />
+                            </StackPanel>
+                            
 
                             <!-- Password -->
-                            <TextBox Tag="Password" Text="{Binding CurrentEmployee.Password}" Margin="0 0 0 30"  />
+                            <!--<TextBox  Tag="Password" Text="{Binding CurrentEmployee.Password}" Margin="0 0 0 30"  />-->
 
                             <!-- Next button -->
                             <Button Content="Login"  Command="{Binding LoginCommand}" HorizontalAlignment="Center" />
@@ -58,7 +95,7 @@
 
                     </Border>
 
-                    <Button Style="{StaticResource TextButton}"  Command="{Binding NavigateRegistrationPage}" Content="I already have an account" HorizontalAlignment="Center" />
+                    <Button Style="{StaticResource TextButton}"  Command="{Binding NavigateRegistrationPage}" Content="Or, create a free account..." HorizontalAlignment="Center" />
 
                 </StackPanel>
             </ScrollViewer>

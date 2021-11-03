@@ -14,42 +14,35 @@ namespace Chat_Application_Clients.ViewModel
 {
    public class RegistrationViewModel : BaseViewModel
     {
-        public NavigationStores navigation { get; set; }
+       
         private RequesttoSignUP currentEmployee;
         private DataCommunication communication1;
         private ResponsetoSignUP registrationResponse;
         ResponsetoListUser userList;
+        public NavigationStores navigation { get; set; }
         public RequesttoSignUP CurrentEmployee
         {
             get { return currentEmployee; }
             set { currentEmployee = value; OnPropertyChanged("CurrentEmployee"); }
         }
-        
+        public static IDictionary<string, string> SenderName = new Dictionary<string, string>();
+
         public RegistrationViewModel(NavigationStores navigationStore)
         {
             navigation = navigationStore;
-            communication1 = DataCommunication.Instance;
-            CurrentEmployee = new RequesttoSignUP();
             NavigateLoginPage = new NavigateLoginPage(navigationStore);
-            communication1.Mess_Send += C1_Mess_Received;
-            RegisterationCommand = new RelayCommand(Register);
-       
-
-        }
-        public RegistrationViewModel()
-        {
             communication1 = DataCommunication.Instance;
-            // mWindow = window;
             CurrentEmployee = new RequesttoSignUP();
+           
             communication1.Mess_Send += C1_Mess_Received;
             RegisterationCommand = new RelayCommand(Register);
        
 
         }
+      
         public ICommand RegisterationCommand { get; set; }
 
         public ICommand NavigateLoginPage { get; }
-        //   public ICommand AccessibilityCommand { get; set; }
         public void C1_Mess_Received(object mess, string messType)
         {
 
@@ -69,9 +62,6 @@ namespace Chat_Application_Clients.ViewModel
 
                 }
 
-
-
-
             }
 
             else if (messType == "Current User Login")
@@ -82,16 +72,14 @@ namespace Chat_Application_Clients.ViewModel
 
             }
 
-
-            
-
         }
 
         public void Register()
         {
             string email = CurrentEmployee.Email;
-      
             var password = CurrentEmployee.Password;
+            RetreiveSenderEmail.Instance.SenderEmailID = CurrentEmployee.Email;
+            SenderName.Add(CurrentEmployee.Email, CurrentEmployee.UserName);
             RetreiveSenderEmail.Instance.SenderName = CurrentEmployee.UserName;
             communication1.DataSend<RequesttoSignUP>(CurrentEmployee, "Registration");
 

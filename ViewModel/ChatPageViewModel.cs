@@ -23,11 +23,12 @@ namespace Chat_Application_Clients.ViewModel
         private SenderReceiverEmial senderreceiverEmail;
         ResponseOfHistoryMessages responseHistoryMessage;
         SenderNewMessage newMessage;
+        User updateUserStatus;
         public string message;
         public string SenderUserName;
-        public NavigationStores navigation { get; set; }
-        public DelegateCommand<object> ItemSelectionChanged { get; private set; }
+        private string userName;
 
+        public DelegateCommand<object> ItemSelectionChanged { get; private set; }
         private ObservableCollection<User> userList;
         public ObservableCollection<User> UserList
         {
@@ -41,6 +42,15 @@ namespace Chat_Application_Clients.ViewModel
             get { return historyMessage; }
             set { historyMessage = value; OnPropertyChanged("HistoryMessage"); }
         }
+        public string UserName
+        {
+            get { return userName; }
+            set
+            {
+                userName = value; OnPropertyChanged("userName");
+            }
+        }
+
         public RequestToSendMess MessageSend
         {
             get { return messageSend; }
@@ -66,10 +76,12 @@ namespace Chat_Application_Clients.ViewModel
 
         }
         public ICommand SendCommand { get; set; }
-   
+        public ICommand LogoutCommand { get; set; }
+
+
         public void Send()
         {
-      
+
             message = MessageSend.Message;
             MessageSend.Sender_Email_ID = RetreiveSenderEmail.Instance.SenderEmailID;
             MessageSend.Receiver_Email_id = SenderReceiverEmailID.ReceiverEmailID;
@@ -77,12 +89,17 @@ namespace Chat_Application_Clients.ViewModel
             MessageSend.Messag_SendTime = DateTime.Now;
             MessageSend.SenderName = RetreiveSenderEmail.Instance.SenderName;
             communication1.DataSend<RequestToSendMess>(MessageSend, "Send Message Request");
-            
 
         }
 
-      
-      
+        public void Logout()
+        {
+            communication1.DataSend("Request for Logout");
+            communication1.DataSend("Current User Login");
+            Environment.Exit(0);
+
+        }
+
         public ChatPageViewModel(ResponsetoListUser user)
         {
 
@@ -90,52 +107,50 @@ namespace Chat_Application_Clients.ViewModel
             HistoryMessage = new ObservableCollection<HistoryOfMessages>();
             for (int i = 0; i < user.userListResponse.Count; i++)
             {
+               
                 UserList.Add(user.userListResponse[i]);
             }
             communication1 = DataCommunication.Instance;
             ItemSelectionChanged = new DelegateCommand<object>((obj) => { OnItemSelectionChanged(obj); });
             SendCommand = new RelayCommand(Send);
+            LogoutCommand = new RelayCommand(Logout);
             MessageSend = new RequestToSendMess();
             SenderReceiverEmailID = new SenderReceiverEmial();
             communication1.Mess_Send += C1_Mess_Received;
-         
-
-
-
+            communication1.DataSend("Update User Data");
         }
-
+       
         public void C1_Mess_Received(object mess, string messType)
         {
             //SenderUserName = RetreiveSenderEmail.Instance.SenderName;
-            if (messType== "History of message")
+            if (messType == "History of message")
             {
 
                 responseHistoryMessage = (ResponseOfHistoryMessages)mess;
-
                 App.Current.Dispatcher.Invoke((Action)delegate
                 {
                     HistoryMessage.Clear();
                 });
                 for (int i = 0; i < responseHistoryMessage.historyOfMessages.Count; i++)
-                    {
-                        // ObservableCollection created on UI thread can only modify  from UI thread
-                        // not from other threads to update objects created on UI thread from different thread,
-                        // simply put the delegate on UI Dispatcher and that will do work  delegating it to UI thread.
+                {
+                    // ObservableCollection created on UI thread can only modify  from UI thread
+                    // not from other threads to update objects created on UI thread from different thread,
+                    // simply put the delegate on UI Dispatcher and that will do work  delegating it to UI thread.
 
-                        App.Current.Dispatcher.Invoke((Action)delegate
+                    App.Current.Dispatcher.Invoke((Action)delegate
                         {
                             HistoryMessage.Add(responseHistoryMessage.historyOfMessages[i]);
                         });
 
-                    }
-                
+                }
+
 
             }
 
-            else if(messType== "Message Receive Request")
+            else if (messType == "Message Receive Request")
             {
                 newMessage = (SenderNewMessage)mess;
-               
+                MessageSend.Message = null;
                 // ObservableCollection created on UI thread can only modify  from UI thread
                 // not from other threads to update objects created on UI thread from different thread,
                 // simply put the delegate on UI Dispatcher and that will do work  delegating it to UI thread.
@@ -143,18 +158,22 @@ namespace Chat_Application_Clients.ViewModel
                 App.Current.Dispatcher.Invoke((Action)delegate
                     {
                         HistoryOfMessages historyOf = new HistoryOfMessages();
-                        historyOf.SenderName =  newMessage.SenderName;
+                        historyOf.SenderName = newMessage.SenderName;
                         historyOf.Messages = newMessage.Message;
                         historyOf.MessageSentTime = newMessage.MessageSendTime;
                         historyOf.SenderEmail = newMessage.SenderEmailID;
-                        
                         HistoryMessage.Add(historyOf);
                     });
+                // 
 
-                
             }
+            else if (messType == "Update User Data")
+            {
 
-        }
+                updateUserStatus = (User)mess;
+
+            }
+            }
         private void OnItemSelectionChanged(object obj)
         {
             if(obj is User user)
@@ -162,6 +181,7 @@ namespace Chat_Application_Clients.ViewModel
                 string email = user.EmailID;
                 SenderReceiverEmailID.ReceiverEmailID = email;
                 SenderReceiverEmailID.SenderEmailID = RetreiveSenderEmail.Instance.SenderEmailID;
+                UserName=user.UserName;
                 communication1.DataSend<SenderReceiverEmial>(SenderReceiverEmailID, "History of message");
      
             }

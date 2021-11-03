@@ -17,11 +17,7 @@ namespace Chat_Application_Clients.ViewModel
         private SenderReceiverEmial senderEmail;
         private DataCommunication communication1;
         UserLoginResponse userRegistation;
-        UserLoginRequest userLogin;
         ResponsetoListUser userList;
-        LoginUser loginUser;
-
-
         public NavigationStores navigation { get; set; }
         public UserLoginRequest CurrentEmployee
         {
@@ -34,11 +30,7 @@ namespace Chat_Application_Clients.ViewModel
             get { return senderEmail; }
             set { senderEmail = value; OnPropertyChanged("SenderEmail"); }
         }
-
-
         public ICommand NavigateRegistrationPage { get; }
-
-   
         public LoginViewModel(NavigationStores navigationStore)
         {
             navigation = navigationStore;
@@ -53,10 +45,7 @@ namespace Chat_Application_Clients.ViewModel
 
         }
 
-       public LoginViewModel()
-        {
-
-        }
+      
 
         public ICommand LoginCommand { get; set; }
 
@@ -76,23 +65,13 @@ namespace Chat_Application_Clients.ViewModel
                     MessageBox.Show("Invalid name and password");
 
                 }
-
-                
-
             }
 
             else if (messType == "Current User Login")
             {
-          
-                    userList = (ResponsetoListUser)mess;
-                    navigation.CurrentViewModel = new ChatPageViewModel(userList);
+                  userList = (ResponsetoListUser)mess;
+                  navigation.CurrentViewModel = new ChatPageViewModel(userList);
             }
-
-
-           
-
-
-
         }
 
 

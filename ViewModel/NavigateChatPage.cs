@@ -7,15 +7,9 @@ using System.Threading.Tasks;
 
 namespace Chat_Application_Clients.ViewModel
 {
-
-
-   
-        public class NavigateChatPage : CommandBase
+    public class NavigateChatPage : CommandBase
         {
             private readonly NavigationStores _navigationStore;
-
-        
-
             public NavigateChatPage(NavigationStores navigationStore)
             {
                 _navigationStore = navigationStore;

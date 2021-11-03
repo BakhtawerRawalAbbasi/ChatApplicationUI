@@ -134,20 +134,26 @@
           "lib/netcoreapp3.0/DevExpress.Xpf.Themes.Office2019Colorful.v21.1.dll": {}
         }
       },
-      "DevExpress.Xpo/19.2.6": {
+      "DevExpress.Xpo/21.1.6": {
         "type": "package",
         "dependencies": {
-          "DevExpress.Data": "[19.2.6]",
+          "DevExpress.Data": "[21.1.6]",
           "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Microsoft.Win32.Registry": "4.5.0",
           "NETStandard.Library": "2.0.3",
           "System.Data.SqlClient": "4.5.0",
-          "System.ServiceModel.Primitives": "4.4.0"
+          "System.Drawing.Common": "4.5.0",
+          "System.Security.Principal.Windows": "4.5.0",
+          "System.ServiceModel.Http": "4.5.3",
+          "System.ServiceModel.NetTcp": "4.4.4",
+          "System.ServiceModel.Security": "4.4.4",
+          "System.Text.Json": "4.6.0"
         },
         "compile": {
-          "lib/netstandard2.0/DevExpress.Xpo.v19.2.dll": {}
+          "lib/netstandard2.0/DevExpress.Xpo.v21.1.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/DevExpress.Xpo.v19.2.dll": {}
+          "lib/netstandard2.0/DevExpress.Xpo.v21.1.dll": {}
         }
       },
       "EntityFramework/6.4.4": {
@@ -249,11 +255,11 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore/5.0.10": {
+      "Microsoft.EntityFrameworkCore/5.0.11": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore.Abstractions": "5.0.10",
-          "Microsoft.EntityFrameworkCore.Analyzers": "5.0.10",
+          "Microsoft.EntityFrameworkCore.Abstractions": "5.0.11",
+          "Microsoft.EntityFrameworkCore.Analyzers": "5.0.11",
           "Microsoft.Extensions.Caching.Memory": "5.0.0",
           "Microsoft.Extensions.DependencyInjection": "5.0.2",
           "Microsoft.Extensions.Logging": "5.0.0",
@@ -268,7 +274,7 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Abstractions/5.0.10": {
+      "Microsoft.EntityFrameworkCore.Abstractions/5.0.11": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
@@ -277,7 +283,7 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Abstractions.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Analyzers/5.0.10": {
+      "Microsoft.EntityFrameworkCore.Analyzers/5.0.11": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/_._": {}
@@ -286,10 +292,10 @@
           "lib/netstandard2.0/_._": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational/5.0.10": {
+      "Microsoft.EntityFrameworkCore.Relational/5.0.11": {
         "type": "package",
         "dependencies": {
-          "Microsoft.EntityFrameworkCore": "5.0.10",
+          "Microsoft.EntityFrameworkCore": "5.0.11",
           "Microsoft.Extensions.Configuration.Abstractions": "5.0.0"
         },
         "compile": {
@@ -299,11 +305,11 @@
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.SqlServer/5.0.10": {
+      "Microsoft.EntityFrameworkCore.SqlServer/5.0.11": {
         "type": "package",
         "dependencies": {
           "Microsoft.Data.SqlClient": "2.0.1",
-          "Microsoft.EntityFrameworkCore.Relational": "5.0.10"
+          "Microsoft.EntityFrameworkCore.Relational": "5.0.11"
         },
         "compile": {
           "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
@@ -559,17 +565,6 @@
             "assetType": "runtime",
             "rid": "win"
           }
-        }
-      },
-      "Microsoft.WindowsAPICodePack-Shell/1.1.0": {
-        "type": "package",
-        "compile": {
-          "lib/Microsoft.WindowsAPICodePack.Shell.dll": {},
-          "lib/Microsoft.WindowsAPICodePack.ShellExtensions.dll": {}
-        },
-        "runtime": {
-          "lib/Microsoft.WindowsAPICodePack.Shell.dll": {},
-          "lib/Microsoft.WindowsAPICodePack.ShellExtensions.dll": {}
         }
       },
       "NaCl.Net/0.1.13": {
@@ -1638,17 +1633,30 @@
           }
         }
       },
-      "System.ServiceModel.Http/4.5.0": {
+      "System.ServiceModel.Http/4.5.3": {
         "type": "package",
         "dependencies": {
-          "System.Private.ServiceModel": "4.5.0",
-          "System.ServiceModel.Primitives": "4.5.0"
+          "System.Private.ServiceModel": "4.5.3",
+          "System.ServiceModel.Primitives": "4.5.3"
         },
         "compile": {
           "ref/netstandard2.0/System.ServiceModel.Http.dll": {}
         },
         "runtime": {
           "lib/netstandard2.0/System.ServiceModel.Http.dll": {}
+        }
+      },
+      "System.ServiceModel.NetTcp/4.4.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.ServiceModel": "4.4.4",
+          "System.ServiceModel.Primitives": "4.4.4"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.ServiceModel.NetTcp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.ServiceModel.NetTcp.dll": {}
         }
       },
       "System.ServiceModel.Primitives/4.6.0": {
@@ -1663,6 +1671,19 @@
         "runtime": {
           "lib/netcoreapp2.1/System.ServiceModel.Primitives.dll": {},
           "lib/netcoreapp2.1/System.ServiceModel.dll": {}
+        }
+      },
+      "System.ServiceModel.Security/4.4.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Private.ServiceModel": "4.4.4",
+          "System.ServiceModel.Primitives": "4.4.4"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.ServiceModel.Security.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.ServiceModel.Security.dll": {}
         }
       },
       "System.Text.Encoding/4.3.0": {
@@ -1704,6 +1725,15 @@
         },
         "compile": {
           "ref/netstandard1.3/System.Text.Encoding.Extensions.dll": {}
+        }
+      },
+      "System.Text.Json/4.6.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/System.Text.Json.dll": {}
         }
       },
       "System.Text.RegularExpressions/4.3.0": {
@@ -2076,19 +2106,19 @@
         "lib/netcoreapp3.0/DevExpress.Xpf.Themes.Office2019Colorful.v21.1.dll"
       ]
     },
-    "DevExpress.Xpo/19.2.6": {
-      "sha512": "34n5hvO6J4bhYCOi1rNqg1aPSsRFgqiiKMk2mVlMt6Azc3ieRdNQj3psB3/afRuDwitGlL10yObSsmE2LrImsQ==",
+    "DevExpress.Xpo/21.1.6": {
+      "sha512": "ISqCnXRGLo73UKRVafVH9K6utR/4Pzb2YuJ7rRwK5pDJ71GMEyj2kTq9A3Jt8yPVN0GgYMmWcmhFQg8LSDwZMQ==",
       "type": "package",
-      "path": "devexpress.xpo/19.2.6",
+      "path": "devexpress.xpo/21.1.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "devexpress.xpo.19.2.6.nupkg.sha512",
+        "devexpress.xpo.21.1.6.nupkg.sha512",
         "devexpress.xpo.nuspec",
-        "lib/net452/DevExpress.Xpo.v19.2.dll",
-        "lib/net452/DevExpress.Xpo.v19.2.xml",
-        "lib/netstandard2.0/DevExpress.Xpo.v19.2.dll",
-        "lib/netstandard2.0/DevExpress.Xpo.v19.2.xml",
+        "lib/net452/DevExpress.Xpo.v21.1.dll",
+        "lib/net452/DevExpress.Xpo.v21.1.xml",
+        "lib/netstandard2.0/DevExpress.Xpo.v21.1.dll",
+        "lib/netstandard2.0/DevExpress.Xpo.v21.1.xml",
         "readme.txt"
       ]
     },
@@ -2299,73 +2329,73 @@
         "runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.pdb"
       ]
     },
-    "Microsoft.EntityFrameworkCore/5.0.10": {
-      "sha512": "w5+5oewaQWDj4ChxxjLhdxIi98dK+kq7wvqnTco9PodkqHIDMfKk+5fQCQGLQrbhTdNaqyfYE1ApFP66mLXv6Q==",
+    "Microsoft.EntityFrameworkCore/5.0.11": {
+      "sha512": "2DQJvH6NRPRKPOR6ZaJe2pDn0bSpQZSzHk+7QatFo06KfvP3Tixy5DAOviXkP6963FEQMuVDSvZef1amORBnaw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore/5.0.10",
+      "path": "microsoft.entityframeworkcore/5.0.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.dll",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.xml",
-        "microsoft.entityframeworkcore.5.0.10.nupkg.sha512",
+        "microsoft.entityframeworkcore.5.0.11.nupkg.sha512",
         "microsoft.entityframeworkcore.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Abstractions/5.0.10": {
-      "sha512": "Ib85lZI/jxvsKcCS0GHVeqBv/JGzEvKa6HkoyxNu0EDmzDoh4OFl+dDKSx4Vr6I5YWT7nQj3sz6I4I0wHSN0xg==",
+    "Microsoft.EntityFrameworkCore.Abstractions/5.0.11": {
+      "sha512": "Ut1BeIwAavUncIChZ0jM7qdqVsnLI1i2eCn/7rdqpVW/JldPFMQzlCMBtiq7dGuVMSniDNUnc93olYtttyD/Fg==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.abstractions/5.0.10",
+      "path": "microsoft.entityframeworkcore.abstractions/5.0.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Abstractions.dll",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Abstractions.xml",
-        "microsoft.entityframeworkcore.abstractions.5.0.10.nupkg.sha512",
+        "microsoft.entityframeworkcore.abstractions.5.0.11.nupkg.sha512",
         "microsoft.entityframeworkcore.abstractions.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Analyzers/5.0.10": {
-      "sha512": "MBnG+g6jrmK72y4rU+4y2btHrl72i2q3zrXG3pj2zZGXXrG9Q4SlwL5ul0ASmQXYjhJ4VpDfd4o1/gdRPsa2jA==",
+    "Microsoft.EntityFrameworkCore.Analyzers/5.0.11": {
+      "sha512": "6vCGQY0H667qkV5fGuhHzWPveF0dpEwEs9xQyDgamwxkIN7LrPHQGp2eOXj6xVF+i8noTLtTR4sNMizKSnI2JA==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.analyzers/5.0.10",
+      "path": "microsoft.entityframeworkcore.analyzers/5.0.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "analyzers/dotnet/cs/Microsoft.EntityFrameworkCore.Analyzers.dll",
         "lib/netstandard2.0/_._",
-        "microsoft.entityframeworkcore.analyzers.5.0.10.nupkg.sha512",
+        "microsoft.entityframeworkcore.analyzers.5.0.11.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Relational/5.0.10": {
-      "sha512": "3l7GA+0y5E3kDOl85KRHhC0zXYA/CyQBQqDXvFGkqYzdPMRyWQkaQz2+yN4CN/SC+TVa48FPIAc2Wim8aWAliQ==",
+    "Microsoft.EntityFrameworkCore.Relational/5.0.11": {
+      "sha512": "6JLLJbi5Rh2LicrGi7nnhbmkQGCKi72uhjlAY/ozJr6cJdHOaMCUeWfglgrXUwvA5C+oE814eOxjeTdEF9oTyQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.relational/5.0.10",
+      "path": "microsoft.entityframeworkcore.relational/5.0.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.dll",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.Relational.xml",
-        "microsoft.entityframeworkcore.relational.5.0.10.nupkg.sha512",
+        "microsoft.entityframeworkcore.relational.5.0.11.nupkg.sha512",
         "microsoft.entityframeworkcore.relational.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.SqlServer/5.0.10": {
-      "sha512": "HyZK8UIsoI14uIMF6eNlg4lCzWWxRrwBVJ8ZJztOqhqQSO/3TX03MzoPnz/yMN5Hqv+2lbEp29wnuUowjGEcng==",
+    "Microsoft.EntityFrameworkCore.SqlServer/5.0.11": {
+      "sha512": "RQVMP2DmrHz/7rxBN/3fAfun1QOWAcqJMZLBfXr+K+rSgqXn/fIeTQ0k7Bms9LQO9v90PGPyYhcS7t5QhUw1jQ==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.sqlserver/5.0.10",
+      "path": "microsoft.entityframeworkcore.sqlserver/5.0.11",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.dll",
         "lib/netstandard2.1/Microsoft.EntityFrameworkCore.SqlServer.xml",
-        "microsoft.entityframeworkcore.sqlserver.5.0.10.nupkg.sha512",
+        "microsoft.entityframeworkcore.sqlserver.5.0.11.nupkg.sha512",
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
@@ -2810,23 +2840,6 @@
         "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "Microsoft.WindowsAPICodePack-Shell/1.1.0": {
-      "sha512": "8WvLG0TNTylzMB8gnZeZDG68/DsagAF64K35RC2Y/zocHp4e03Uj/kba6egQlq1+0uVv04FpLG+CmENEIN53rg==",
-      "type": "package",
-      "path": "microsoft.windowsapicodepack-shell/1.1.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "lib/Microsoft.WindowsAPICodePack.Shell.dll",
-        "lib/Microsoft.WindowsAPICodePack.Shell.pdb",
-        "lib/Microsoft.WindowsAPICodePack.Shell.xml",
-        "lib/Microsoft.WindowsAPICodePack.ShellExtensions.XML",
-        "lib/Microsoft.WindowsAPICodePack.ShellExtensions.dll",
-        "lib/Microsoft.WindowsAPICodePack.ShellExtensions.pdb",
-        "microsoft.windowsapicodepack-shell.1.1.0.nupkg.sha512",
-        "microsoft.windowsapicodepack-shell.nuspec"
       ]
     },
     "NaCl.Net/0.1.13": {
@@ -6184,10 +6197,10 @@
         "system.security.securestring.nuspec"
       ]
     },
-    "System.ServiceModel.Http/4.5.0": {
-      "sha512": "rHpREpmpxsPEWjJcahlUCL5S4zC+CiFE7G8BLEfVqerpKpmITbVGesip2/o7YBVLxzZVjIQ6gVlTF4H62bzzRA==",
+    "System.ServiceModel.Http/4.5.3": {
+      "sha512": "zxR4z6G/FFK/uAUbo7+3IJOqm0w4/lyfHSQDf+hhUHRTc7XSeReGS5iKQq95gyl1ighHEuayqOiB7iacrB6ZUg==",
       "type": "package",
-      "path": "system.servicemodel.http/4.5.0",
+      "path": "system.servicemodel.http/4.5.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6227,8 +6240,51 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.servicemodel.http.4.5.0.nupkg.sha512",
+        "system.servicemodel.http.4.5.3.nupkg.sha512",
         "system.servicemodel.http.nuspec",
+        "version.txt"
+      ]
+    },
+    "System.ServiceModel.NetTcp/4.4.4": {
+      "sha512": "TZUwkBUHK+HgPVpypcnCEzenn+Hly3mQ+QDqDtHKyqVBP2Yt+DAMp3NwuW35mTSMRqna5p9hd0U0vVq5azovOQ==",
+      "type": "package",
+      "path": "system.servicemodel.nettcp/4.4.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/net46/System.ServiceModel.NetTcp.dll",
+        "lib/net461/System.ServiceModel.NetTcp.dll",
+        "lib/netcore50/System.ServiceModel.NetTcp.dll",
+        "lib/netstandard1.3/System.ServiceModel.NetTcp.dll",
+        "lib/netstandard2.0/System.ServiceModel.NetTcp.dll",
+        "lib/portable-net45+win8/_._",
+        "lib/win8/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/net46/System.ServiceModel.NetTcp.dll",
+        "ref/net461/System.ServiceModel.NetTcp.dll",
+        "ref/netcore50/System.ServiceModel.NetTcp.dll",
+        "ref/netstandard1.1/System.ServiceModel.NetTcp.dll",
+        "ref/netstandard1.3/System.ServiceModel.NetTcp.dll",
+        "ref/netstandard2.0/System.ServiceModel.NetTcp.dll",
+        "ref/portable-net45+win8/_._",
+        "ref/win8/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.servicemodel.nettcp.4.4.4.nupkg.sha512",
+        "system.servicemodel.nettcp.nuspec",
         "version.txt"
       ]
     },
@@ -6284,6 +6340,47 @@
         "ref/xamarinwatchos10/_._",
         "system.servicemodel.primitives.4.6.0.nupkg.sha512",
         "system.servicemodel.primitives.nuspec"
+      ]
+    },
+    "System.ServiceModel.Security/4.4.4": {
+      "sha512": "8mJj3lUNbBkntouQ3Eg3IF04GxiDrDK2X79+kcfq8V+W7NoYBREgWczaD60ZmW4KKRKnL0q3OnUNJlkzJJfe5w==",
+      "type": "package",
+      "path": "system.servicemodel.security/4.4.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.ServiceModel.Security.dll",
+        "lib/netstandard1.3/System.ServiceModel.Security.dll",
+        "lib/netstandard2.0/System.ServiceModel.Security.dll",
+        "lib/portable-net45+win8+wp8/_._",
+        "lib/win8/_._",
+        "lib/wp8/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.ServiceModel.Security.dll",
+        "ref/netstandard1.0/System.ServiceModel.Security.dll",
+        "ref/netstandard1.1/System.ServiceModel.Security.dll",
+        "ref/netstandard2.0/System.ServiceModel.Security.dll",
+        "ref/portable-net45+win8+wp8/_._",
+        "ref/win8/_._",
+        "ref/wp8/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.servicemodel.security.4.4.4.nupkg.sha512",
+        "system.servicemodel.security.nuspec",
+        "version.txt"
       ]
     },
     "System.Text.Encoding/4.3.0": {
@@ -6460,6 +6557,27 @@
         "ref/xamarinwatchos10/_._",
         "system.text.encoding.extensions.4.3.0.nupkg.sha512",
         "system.text.encoding.extensions.nuspec"
+      ]
+    },
+    "System.Text.Json/4.6.0": {
+      "sha512": "4F8Xe+JIkVoDJ8hDAZ7HqLkjctN/6WItJIzQaifBwClC7wmoLSda/Sv2i6i1kycqDb3hWF4JCVbpAweyOKHEUA==",
+      "type": "package",
+      "path": "system.text.json/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Text.Json.dll",
+        "lib/net461/System.Text.Json.xml",
+        "lib/netcoreapp3.0/System.Text.Json.dll",
+        "lib/netcoreapp3.0/System.Text.Json.xml",
+        "lib/netstandard2.0/System.Text.Json.dll",
+        "lib/netstandard2.0/System.Text.Json.xml",
+        "system.text.json.4.6.0.nupkg.sha512",
+        "system.text.json.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Text.RegularExpressions/4.3.0": {
@@ -7049,10 +7167,9 @@
     "net5.0-windows7.0": [
       "Communication_lay >= 1.0.0",
       "DevExpress.Data >= 21.1.6",
-      "DevExpress.Xpo >= 19.2.6",
+      "DevExpress.Xpo >= 21.1.6",
       "EntityFramework >= 6.4.4",
-      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.10",
-      "Microsoft.WindowsAPICodePack-Shell >= 1.1.0",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.11",
       "NetMQ >= 4.0.1.6",
       "System.Windows.Interactivity.WPF >= 2.0.20525",
       "devexpress.wpf.core >= 21.1.5"
@@ -7121,7 +7238,7 @@
           },
           "DevExpress.Xpo": {
             "target": "Package",
-            "version": "[19.2.6, )"
+            "version": "[21.1.6, )"
           },
           "EntityFramework": {
             "target": "Package",
@@ -7129,11 +7246,7 @@
           },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
-            "version": "[5.0.10, )"
-          },
-          "Microsoft.WindowsAPICodePack-Shell": {
-            "target": "Package",
-            "version": "[1.1.0, )"
+            "version": "[5.0.11, )"
           },
           "NetMQ": {
             "target": "Package",
@@ -7171,16 +7284,6 @@
     }
   },
   "logs": [
-    {
-      "code": "NU1608",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package version outside of dependency constraint: DevExpress.Xpo 19.2.6 requires DevExpress.Data (= 19.2.6) but version DevExpress.Data 21.1.6 was resolved.",
-      "libraryId": "DevExpress.Data",
-      "targetGraphs": [
-        "net5.0-windows7.0"
-      ]
-    },
     {
       "code": "NU1608",
       "level": "Warning",
@@ -7227,16 +7330,6 @@
       "warningLevel": 1,
       "message": "Detected package version outside of dependency constraint: DevExpress.Pdf.Drawing 21.1.5 requires DevExpress.Data (= 21.1.5) but version DevExpress.Data 21.1.6 was resolved.",
       "libraryId": "DevExpress.Data",
-      "targetGraphs": [
-        "net5.0-windows7.0"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.WindowsAPICodePack-Shell 1.1.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0-windows7.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.WindowsAPICodePack-Shell",
       "targetGraphs": [
         "net5.0-windows7.0"
       ]
